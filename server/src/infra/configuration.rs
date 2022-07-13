@@ -67,7 +67,7 @@ pub struct Configuration {
     pub http_port: u16,
     #[builder(default = r#"SecUtf8::from("secretjwtsecret")"#)]
     pub jwt_secret: SecUtf8,
-    [builder(default = r#"String::from("dc=hardysteffen,dc=com")"#)]
+    #[builder(default = r#"String::from("dc=example,dc=com")"#)]
     pub ldap_base_dn: String,
     #[builder(default = r#"UserId::new("admin")"#)]
     pub ldap_user_dn: UserId,
